@@ -6,4 +6,9 @@ html
     = javascript_include_tag 'application', 'data-turbolinks-track' => true 
     = csrf_meta_tags
   body
-    =yield
+    nav.navbar.navbar-default
+      .container
+        .navbar-header
+          .navbar-brand Rails blog
+    .container        
+      =yield
