@@ -1,2 +1,25 @@
+@font-face {
+  font-family: 'Roboto Mono';
+    src: url('/assets/RobotoMono-ThinItalic.ttf');
+}
+
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+.post-title{
+  font-family: 'Roboto Mono';
+  color: #000;
+  font-size: 36px;
+  font-weight: 800;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+.post-title a{
+  color: #000;
+  text-decoration: none;
+}
+
+.post-title a:hover{
+color: #0085A1;
+}

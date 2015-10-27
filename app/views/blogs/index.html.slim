@@ -1,6 +1,6 @@
 .row
   -@blogs.each do |b|
-    h2=b.title
+    h2.post-title=link_to b.title, root_path
     p=b.content
     p=b.created_at
     hr
