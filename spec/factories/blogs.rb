@@ -1,8 +1,9 @@
 require 'faker'
 
 FactoryGirl.define do
-  factory :blog do |b|
-    b.title {Faker::Book.title}
-    b.content {Faker::Lorem.paragraph}
+  factory :blog do
+    title {Faker::Book.title}
+    content {Faker::Lorem.paragraph}
+    user
   end
 end
