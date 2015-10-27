@@ -2,16 +2,7 @@ require 'rails_helper'
 
 RSpec.describe Blog, type: :model do
   before(:each) do
-    @blog=Blog.create(title: 'Random Title')
-  end
-  
-  it "has one blog after addding one" do
-    expect(Blog.count).to eq 1
-  end
-
-  it "requires title to be present" do
-    @blog = Blog.new(title: '')
-    expect(@blog).to_not be_valid
+    @blog=FactoryGirl.create(:blog)
   end
 
   it "does not require content" do
@@ -20,5 +11,7 @@ RSpec.describe Blog, type: :model do
 
   it "belongs to user" do 
     expect(@blog.user).to_not be_nil
+  end
+  it "has a valid factory" do 
   end
 end
