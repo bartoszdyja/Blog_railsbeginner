@@ -14,6 +14,7 @@ gem 'slim'
 gem 'bootstrap-sass'
 gem 'simple_form'
 gem 'coderay'
+gem 'redcarpet'
 
 group :development, :test do
   gem 'byebug'

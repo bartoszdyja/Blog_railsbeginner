@@ -3,4 +3,5 @@
     h2.post-title=link_to b.title, root_path
     p=b.content
     p Post created at #{b.post_creation} by #{b.user.full_name}
+    =CodeRay.scan("puts 'Hello, world!'", :ruby).div(:line_numbers => :table)
     hr
