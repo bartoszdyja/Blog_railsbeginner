@@ -13,6 +13,7 @@ gem 'devise'
 gem 'slim'
 gem 'bootstrap-sass'
 gem 'simple_form'
+gem 'coderay'
 
 group :development, :test do
   gem 'byebug'
