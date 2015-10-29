@@ -28,6 +28,6 @@ RSpec.describe Blog, type: :model do
   it "orders descending by create date" do
     @blog1 = FactoryGirl.create(:blog)
     @blog2 = FactoryGirl.create(:blog)
-    expect(Blog.all.order('created_at DESC').to_a).to eq [@blog2,@blog1,@blog]
+    expect(Blog.all.to_a).to eq [@blog,@blog1,@blog2]
   end
 end
