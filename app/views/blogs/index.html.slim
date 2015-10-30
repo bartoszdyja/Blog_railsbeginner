@@ -3,5 +3,6 @@
     h2.post-title=link_to b.title, root_path
     p=sanitize coderay(b.content)
     p.italic Post created at #{b.post_creation} by #{b.user.full_name}
-    =link_to 'Edit', edit_blog_path(b)
+    -if current_user==b.user
+      =link_to 'Edit', edit_blog_path(b)
     hr

@@ -5,6 +5,7 @@ class BlogsController < ApplicationController
 
   def create
     @blog = Blog.new(blog_params)
+    @blog.user = current_user
     @blog.save
     redirect_to root_path,  notice: 'Successfully created'
   end
@@ -20,7 +21,7 @@ class BlogsController < ApplicationController
   end
 
   def index
-    @blogs = Blog.all.order('created_at DESC')
+    @blogs = Blog.includes(:user).all.order('created_at DESC')
   end
 
   private
