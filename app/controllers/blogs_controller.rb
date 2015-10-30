@@ -9,6 +9,16 @@ class BlogsController < ApplicationController
     redirect_to root_path,  notice: 'Successfully created'
   end
 
+  def edit
+    @blog = Blog.find(params[:id])
+  end
+
+  def update
+    @blog = Blog.find(params[:id])
+    @blog.update(blog_params)
+    redirect_to root_path
+  end
+
   def index
     @blogs = Blog.all.order('created_at DESC')
   end
