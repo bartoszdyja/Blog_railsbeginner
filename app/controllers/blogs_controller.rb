@@ -6,8 +6,11 @@ class BlogsController < ApplicationController
   def create
     @blog = Blog.new(blog_params)
     @blog.user = current_user
-    @blog.save
-    redirect_to root_path,  notice: 'Successfully created'
+    if @blog.save
+      redirect_to root_path,  notice: 'Successfully created'
+    else
+      render 'new'
+    end
   end
 
   def edit
