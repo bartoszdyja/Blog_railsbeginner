@@ -23,6 +23,10 @@ class BlogsController < ApplicationController
     redirect_to root_path
   end
 
+  def show
+    @blog = Blog.find(params[:id])
+  end
+  
   def index
     @blogs = Blog.includes(:user).all.order('created_at DESC')
   end
